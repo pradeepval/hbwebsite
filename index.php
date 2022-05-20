@@ -30,7 +30,7 @@ input[type=number] {
 }
      </style>
 </head>
-<body>
+<body class="bg-light">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm stickytop">
         <div class="container-fluid">
@@ -163,20 +163,26 @@ input[type=number] {
    </div>
  </div>
 
-<div class="container-fluid">
+<div class="container-fluid px-lg-mt-4">
   <div class="swiper swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img src="images/carousel/1.jpg" class="w=100 d-block" >
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+         <div class="swiper-slide">
+          <img src="images/carousel/2.jpg" class="w=100 d-block" >
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+         <div class="swiper-slide">
+          <img src="images/carousel/3.jpg" class="w=100 d-block" >
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+         <div class="swiper-slide">
+          <img src="images/carousel/4.jpg" class="w=100 d-block" >
+        </div>
+         <div class="swiper-slide">
+          <img src="images/carousel/5.jpg" class="w=100 d-block" >
+        </div>
+         <div class="swiper-slide">
+          <img src="images/carousel/6.jpg" class="w=100 d-block" >
         </div>
       </div>
     </div>
@@ -189,6 +195,11 @@ input[type=number] {
       var swiper = new Swiper(".swiper-container", {
         spaceBetween: 30,
         effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        }
       });
     </script>
 </body>
