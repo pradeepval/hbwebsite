@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>pradeep hotel - ABOUT</title>
   <?php require 'inc/links.php';?>
   <style>
@@ -82,15 +86,44 @@
 <div class="container px-4">
    <div class="swiper mySwiper">
       <div class="swiper-wrapper mb-5">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+         <div class="swiper-slide bg-white text-center overflow-hidden rounded">
+          <img src="images/about/team.jpg" class="w-100">
+          <h5 class="mt-2">Random Name</h5>
+        </div>
+
+
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -104,8 +137,23 @@
 
     <script>
       var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 40,
         pagination: {
           el: ".swiper-pagination",
+        },
+          breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
         },
       });
     </script>

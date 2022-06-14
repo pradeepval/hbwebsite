@@ -24,7 +24,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link me-2" href="#">Rooms</a>
+              <a class="nav-link me-2" href="rooms.php">Rooms</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-2" href="facilities.php">Facilities</a>
