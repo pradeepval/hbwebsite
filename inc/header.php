@@ -1,6 +1,5 @@
- <nav
-      class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm stickytop"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm stickytop"
+     >
       <div class="container-fluid">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php"
           >pradeep hotel</a
@@ -58,15 +57,14 @@
       </div>
     </nav>
 
-    <div
-      class="modal fade"
+    <div class="modal fade"
       id="loginModal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
       tabindex="-1"
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
-    >
+     >
       <div class="modal-dialog">
         <div class="modal-content">
           <form>
@@ -108,15 +106,14 @@
       </div>
     </div>
 
-    <div
-      class="modal fade"
+    <div class="modal fade"
       id="RegisterModal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
       tabindex="-1"
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
-    >
+     >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <form>
