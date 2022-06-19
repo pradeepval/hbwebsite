@@ -8,7 +8,7 @@ $db    = 'hbwebsite';
 $con = mysqli_connect($hname, $uname, $pass, $db);
 
 if (!$con) {
- die("cannot connect to database" . mysqli_connect_error());
+ die("cannot connect to Database" . mysqli_connect_error());
 }
 
 function filteration($data)
