@@ -34,9 +34,9 @@ adminLogin();
                 </button>
             </div>
             <h6 class="card-subtitle mb-1 fw-bold">Side title</h6>
-            <p class="card-text">content</p>
+            <p class="card-text" id ="site_title"></p>
             <h6 class="card-subtitle mb-1 fw-bold">About us</h6>
-             <p class="card-text">content</p>
+             <p class="card-text" id ="site_about"></p>
         </div>
     </div>
 
@@ -82,16 +82,20 @@ adminLogin();
 
   function get_general()t
   {
-    let site_title;
-    let site_about;
+    let site_title = document.getElementById('site_title');
+    let site_about = document.getElementById('site_about');
+;
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST","ajax/settings_crud.php",true);
-    xhr.setRequestHeader('content-type','apllication/x-www-form-urlencoded');
+    xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
 
-    xhr.onload =function(
-      general_data =this.responseText;
-      console.log(general_data);
+    xhr.onload = function(
+      general_data = JSON.parse(this.responseText);
+
+      site_title = general_data.site_title;
+       site_about.innerText = general_data.site_about;
+
     )
 
     xhr.send('get_general');
