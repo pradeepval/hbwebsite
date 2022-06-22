@@ -22,7 +22,7 @@
   <div class="row">
 
     <div class="col-lg-3 col-md-12 mb-lg-0 mb-4 px-lg--0">
-      <nav class="navbar navbar-expand-lg bg-light  bg-white rounded shadow">
+        <nav class="navbar navbar-expand-lg bg-light  bg-white rounded shadow">
           <div class="container-fluid flex-lg-column align-items-stretch">
          <h4 class="mt-2">FILTERS</h4>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#filterdropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
