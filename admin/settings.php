@@ -52,20 +52,20 @@ adminLogin();
                 </div>
                 <div class="modal-body">
                   <div class="mb-3">
-                    <label class="form-label">Side Title</label>
-                    <input type="text" name="side_title" class="form-control shadow-none" />
+                    <label class="form-label">Site Title</label>
+                    <input type="text" name="site_title" id ="site_title_inp" class="form-control shadow-none" />
                   </div>
                    <div class="mb-3">
                     <label class="form-label">About us</label>
-                    <textarea name="site_about"
+                    <textarea name="site_about"  id ="site_about_inp"
                       class="form-control shadow none"
                       rows="6"
                     ></textarea>
                   </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
-                    <button type="button" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                    <button type="button" onclick ="site_title.value = general_data.site_title ,  site_about.value = general_data.site_about" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                    <button type="button" onclick ="upd_general(site_title.value, site_about.value)" class="btn custom-bg text-white shadow-none">SUBMIT</button>
                 </div>
                 </div>
             </form>
@@ -80,29 +80,55 @@ adminLogin();
 <script>
   let general_data;
 
-  function get_general()t
+  function get_general()
   {
     let site_title = document.getElementById('site_title');
     let site_about = document.getElementById('site_about');
-;
+
+    let site_title_inp = document.getElementById('site_title_inp');
+    let site_about_inp = document.getElementById('site_about_inp');
+
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST","ajax/settings_crud.php",true);
     xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
 
-    xhr.onload = function(
+    xhr.onload = function() {
       general_data = JSON.parse(this.responseText);
 
-      site_title = general_data.site_title;
+      site_title.innerText = general_data.site_title;
        site_about.innerText = general_data.site_about;
 
-    )
+       site_title_inp.value = general_data.site_title;
+       site_about_inp.value = general_data.site_about;
+
+    }
 
     xhr.send('get_general');
   }
 
+  function upd_general(site_title_val, site_about_val)
+{
+  let xhr = new XMLHttpRequest();
+    xhr.open("POST","ajax/settings_crud.php",true);
+    xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
 
-  window_onload = function(){
+    xhr.onload = function() {
+      console.log(this.responseText)
+     // general_data = JSON.parse(this.responseText);
+
+    //  site_title.innerText = general_data.site_title;
+      // site_about.innerText = general_data.site_about;
+
+     //  site_title_inp.value = general_data.site_title;
+       //site_about_inp.value = general_data.site_about;
+
+    }
+
+    xhr.send('site_title ='+site_title_val+'&site_about='+site_about_val+'&upd_general');
+}
+
+  window.onload = function(){
   get_general();
   }
 </script>
