@@ -125,7 +125,7 @@ adminLogin();
 
     }
 
-    xhr.send('site_title ='+site_title_val+'&site_about='+site_about_val+'&upd_general');
+    xhr.send('site_title='+site_title_val+'&site_about='+site_about_val+'&upd_general=1');
 }
 
   window.onload = function(){
