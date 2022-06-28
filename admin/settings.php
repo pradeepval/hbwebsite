@@ -132,10 +132,11 @@ adminLogin();
            shutdown_toggle.value = 1;
         }
       }
+      xhr . send('get_general');
 
     }
 
-    xhr.send('get_general');
+
 
 
   function upd_general(site_title_val, site_about_val)
@@ -163,6 +164,27 @@ adminLogin();
 
     xhr.send('site_title='+site_title_val+'&site_about='+site_about_val+'&upd_general=1');
 }
+
+  function upd_shutdown(val){
+        let xhr = new XMLHttpRequest();
+    xhr.open("POST","ajax/settings_crud.php",true);
+    xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+
+    xhr.onload = function() {
+       if(this.responseText == 1)
+       {
+        alert('success', 'site has been shutdown!');
+
+       }
+       else {
+        alert('success', 'shutdown mode off!');
+
+       }
+       get_general();
+    }
+
+    xhr.send('upd_shutdown=' +val);
+    }
 
   window.onload = function(){
   get_general();
